@@ -1,1 +1,170 @@
+/* ===== GENEL SIFIRLAMALAR ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #f4f1ec;
+  color: #2c2c2c;
+  line-height: 1.7;
+}
+
+/* ===== NAVİGASYON ===== */
+nav {
+  background-color: #1a1a2e;
+  padding: 0 40px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: #c9b99a;
+  text-decoration: none;
+  padding: 18px 24px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  transition: color 0.3s;
+}
+
+/* Hiyerarşik seçici 1 */
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+nav ul li a.active {
+  color: #ffffff;
+  border-bottom: 3px solid #e8a838;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #1a1a2e;
+  color: #f4f1ec;
+  text-align: center;
+  padding: 60px 40px 50px;
+  border-bottom: 5px solid #e8a838;
+}
+
+header h1 {
+  font-size: 46px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+header p {
+  font-size: 17px;
+  color: #c9b99a;
+  letter-spacing: 1px;
+}
+
+/* ===== GRUP SEÇİCİ ===== */
+h1, h2, h3 {
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+/* ===== ANA ALAN ===== */
+main {
+  display: flex;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 30px;
+  gap: 30px;
+}
+
+/* ===== SOL İÇERİK ===== */
+.content {
+  flex: 2;
+  background-color: #ffffff;
+  padding: 36px 40px;
+  border-top: 4px solid #e8a838;
+}
+
+/* Hiyerarşik seçici 2 */
+.content h2 {
+  font-size: 22px;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  margin-top: 24px;
+  border-left: 4px solid #e8a838;
+  padding-left: 12px;
+}
+
+.content h2:first-child {
+  margin-top: 0;
+}
+
+.content p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.9;
+  text-align: justify;
+  margin-bottom: 16px;
+}
+
+/* ===== SAĞ SIDEBAR ===== */
+.sidebar {
+  flex: 1;
+  background-color: #1a1a2e;
+  color: #f4f1ec;
+  padding: 30px 28px;
+  border-top: 4px solid #e8a838;
+  align-self: flex-start;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  color: #e8a838;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.sidebar h2:first-child {
+  margin-top: 0;
+}
+
+/* Hiyerarşik seçici 3 */
+.sidebar p {
+  font-size: 14px;
+  color: #c9b99a;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #e8a838;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #1a1a2e;
+  color: #c9b99a;
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 3px solid #e8a838;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+}
