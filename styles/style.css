@@ -237,3 +237,62 @@ button[type="submit"]:hover {
   background-color: #e8a838;
   color: #1a1a2e;
 }
+
+/* ===== RADIO & CHECKBOX GRUPLARI ===== */
+.radio-group,
+.checkbox-group {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+}
+
+.radio-label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.radio-label:last-child,
+.checkbox-label:last-child {
+  margin-bottom: 0;
+}
+
+.radio-label input,
+.checkbox-label input {
+  width: auto;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* ===== FORM BUTONLARI ===== */
+.form-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.btn-reset {
+  background-color: #c0392b;
+  color: #ffffff;
+  border: none;
+  padding: 12px 36px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-reset:hover {
+  background-color: #e74c3c;
+}
