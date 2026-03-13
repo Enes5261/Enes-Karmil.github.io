@@ -198,6 +198,7 @@ footer {
 
 /* Çoklu seçici - ödev şartı */
 input, select, textarea {
+  display: block;
   width: 100%;
   padding: 10px 14px;
   margin-bottom: 20px;
