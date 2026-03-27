@@ -117,6 +117,26 @@ main {
   margin-bottom: 16px;
 }
 
+/* ===== FLEXBOX SAYFASINA LİNK BUTONU ===== */
+.btn-flexbox {
+  display: inline-block;
+  background-color: #1a1a2e;
+  color: #e8a838;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.btn-flexbox:hover {
+  background-color: #e8a838;
+  color: #1a1a2e;
+}
+
 /* ===== SAĞ SIDEBAR ===== */
 .sidebar {
   flex: 1;
@@ -197,7 +217,9 @@ footer {
 }
 
 /* Çoklu seçici - ödev şartı */
-input, select, textarea {
+.contact-container input,
+.contact-container select,
+.contact-container textarea {
   display: block;
   width: 100%;
   padding: 10px 14px;
@@ -210,7 +232,9 @@ input, select, textarea {
   background-color: #fafafa;
 }
 
-input:focus, select:focus, textarea:focus {
+.contact-container input:focus,
+.contact-container select:focus,
+.contact-container textarea:focus {
   outline: none;
   border-color: #1a1a2e;
   background-color: #fff;
