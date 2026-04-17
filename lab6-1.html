@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Öğrenci Not Hesaplama - Melih Enes Karmil</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <style>
+    .lab-container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .lab-container h2 {
+      font-size: 28px;
+      color: #1a1a2e;
+      margin-bottom: 24px;
+      font-weight: bold;
+    }
+
+    .lab-container input[type="text"] {
+      display: block;
+      width: 100%;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      color: #2c2c2c;
+      background-color: #fafafa;
+      box-sizing: border-box;
+    }
+
+    .lab-container input[type="text"]:focus {
+      outline: none;
+      border-color: #1a1a2e;
+    }
+
+    .btn-hesapla {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #f0f4ff;
+      color: #1a1a2e;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 15px;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+      text-align: center;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-hesapla:hover {
+      background-color: #1a1a2e;
+      color: #e8a838;
+    }
+
+    .sonuc-kutu {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 20px 24px;
+      background-color: #f9f9f9;
+      display: none;
+    }
+
+    .sonuc-kutu .isim {
+      font-size: 16px;
+      font-weight: bold;
+      color: #1a1a2e;
+      margin-bottom: 10px;
+    }
+
+    .sonuc-kutu p {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .btn-geri {
+      display: inline-block;
+      margin: 30px 0 0 0;
+      background-color: #1a1a2e;
+      color: #e8a838;
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-geri:hover {
+      background-color: #e8a838;
+      color: #1a1a2e;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="hakkinda.html">Hakkında</a></li>
+      <li><a href="hizmetler.html">Hizmetler</a></li>
+      <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Öğrenci Not Hesaplama</h1>
+    <p>Hafta 6 · Uygulama 1</p>
+  </header>
+
+  <div class="lab-container">
+    <h2>Öğrenci Not Hesaplama</h2>
+
+    <input type="text" id="adsoyad" placeholder="Ad Soyad" />
+    <input type="text" id="vize" placeholder="Vize Notu" />
+    <input type="text" id="final" placeholder="Final Notu" />
+
+    <button class="btn-hesapla" onclick="hesapla()">Hesapla</button>
+
+    <div class="sonuc-kutu" id="sonuc">
+      <p class="isim" id="sonuc-isim"></p>
+      <p id="sonuc-ortalama"></p>
+      <p id="sonuc-harf"></p>
+      <p id="sonuc-durum"></p>
+    </div>
+
+    <a href="index.html" class="btn-geri">← Ana Sayfaya Dön</a>
+  </div>
+
+  <footer>
+    <p>© 2025 Melih Enes Karmil · Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script>
+    function hesapla() {
+      var adsoyad = document.getElementById("adsoyad").value.trim();
+      var vize = parseFloat(document.getElementById("vize").value);
+      var final = parseFloat(document.getElementById("final").value);
+
+      if (adsoyad === "" || isNaN(vize) || isNaN(final)) {
+        alert("Lütfen tüm alanları doldurun!");
+        return;
+      }
+
+      if (vize < 0 || vize > 100 || final < 0 || final > 100) {
+        alert("Notlar 0-100 arasında olmalıdır!");
+        return;
+      }
+
+      var ortalama = (vize * 0.4) + (final * 0.6);
+
+      var harf;
+      if (ortalama >= 90) harf = "AA";
+      else if (ortalama >= 85) harf = "BA";
+      else if (ortalama >= 80) harf = "BB";
+      else if (ortalama >= 75) harf = "CB";
+      else if (ortalama >= 70) harf = "CC";
+      else if (ortalama >= 65) harf = "DC";
+      else if (ortalama >= 60) harf = "DD";
+      else if (ortalama >= 50) harf = "FD";
+      else harf = "FF";
+
+      var durum = ortalama >= 50 ? "Geçti" : "Kaldı";
+
+      document.getElementById("sonuc-isim").textContent = adsoyad;
+      document.getElementById("sonuc-ortalama").textContent = "Ortalama: " + ortalama.toFixed(2);
+      document.getElementById("sonuc-harf").textContent = "Harf Notu: " + harf;
+      document.getElementById("sonuc-durum").textContent = "Durum: " + durum;
+
+      document.getElementById("sonuc").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
