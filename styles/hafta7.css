@@ -1,0 +1,156 @@
+/* ===== HAFTA 7 - TEMA RENKLERİ ===== */
+:root {
+  --koyu: #1a1a2e;
+  --altin: #e8a838;
+  --krem: #f4f1ec;
+  --acik-gold: #c9b99a;
+}
+
+/* ===== NAVBAR ===== */
+#mainNavbar {
+  background-color: var(--koyu);
+}
+
+#mainNavbar .navbar-brand,
+#mainNavbar .nav-link {
+  color: var(--acik-gold);
+  letter-spacing: 0.5px;
+}
+
+#mainNavbar .nav-link:hover {
+  color: #ffffff;
+}
+
+/* ===== HERO ===== */
+.hero-section {
+  background-color: var(--koyu);
+  color: #f4f1ec;
+  border-bottom: 4px solid var(--altin);
+}
+
+/* ===== SECTION BAŞLIKLARI ===== */
+.section-title {
+  color: var(--koyu);
+  border-left: 4px solid var(--altin);
+  padding-left: 12px;
+  display: inline-block;
+}
+
+/* ===== KARTLAR ===== */
+.card {
+  border-top: 3px solid var(--altin);
+  border-radius: 4px;
+}
+
+.featured-card {
+  border-top: 3px solid var(--koyu);
+}
+
+.card-title {
+  color: var(--koyu);
+  font-weight: bold;
+}
+
+.card-features li {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.card-footer {
+  background-color: #f8f8f8;
+}
+
+.card-footer strong {
+  color: var(--koyu);
+}
+
+/* ===== ÖZELLİKLER ALANI ===== */
+.info-section {
+  background-color: var(--krem);
+}
+
+.info-section h5 {
+  color: var(--koyu);
+  font-weight: bold;
+}
+
+/* ===== FORM ===== */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--koyu);
+  box-shadow: 0 0 0 0.2rem rgba(26, 26, 46, 0.15);
+}
+
+/* ===== SONUÇ ALANI ===== */
+#sonucAlani .alert {
+  border-radius: 4px;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background-color: var(--koyu);
+  color: var(--acik-gold);
+  border-top: 3px solid var(--altin);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* ===== KARANLIK TEMA ===== */
+body.dark-theme {
+  background-color: #121222;
+  color: #f4f1ec;
+}
+
+body.dark-theme .card {
+  background-color: #1e1e35;
+  color: #f4f1ec;
+  border-color: var(--altin);
+}
+
+body.dark-theme .card-title {
+  color: var(--altin);
+}
+
+body.dark-theme .card-features li {
+  color: var(--acik-gold);
+}
+
+body.dark-theme .card-footer {
+  background-color: #16162a;
+}
+
+body.dark-theme .card-footer strong {
+  color: var(--altin);
+}
+
+body.dark-theme .section-title {
+  color: var(--altin);
+}
+
+body.dark-theme .info-section {
+  background-color: #16162a;
+}
+
+body.dark-theme .info-section h5 {
+  color: var(--altin);
+}
+
+body.dark-theme .form-control,
+body.dark-theme .form-select {
+  background-color: #1e1e35;
+  color: #f4f1ec;
+  border-color: var(--acik-gold);
+}
+
+body.dark-theme .form-label {
+  color: var(--acik-gold);
+}
+
+body.dark-theme .form-check-label {
+  color: var(--acik-gold);
+}
+
+body.dark-theme #basvuru .card {
+  background-color: #1e1e35;
+}
