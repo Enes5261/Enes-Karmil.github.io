@@ -320,3 +320,15 @@ button[type="submit"]:hover {
 .btn-reset:hover {
   background-color: #e74c3c;
 }
+
+.btn-reset:hover {
+  background-color: #e74c3c;
+}
+
+/* ===== CONTENT DÜZELTME ===== */
+.content h2,
+.content p,
+.content .btn-flexbox {
+  display: block;
+  width: 100%;
+}
